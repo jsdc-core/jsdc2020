@@ -1,24 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-export default function HTML(props) {
-  function renderGoogleTranslateElementScript() {
-    return (
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-              pageLanguage: 'zh-TW',
-              includedLanguages: 'en,zh-CN,ja,zh-TW',
-              layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT,
-              multilanguagePage: true,
-            }, 'google_translate_element')
-          }`,
-        }}
-      />
-    )
-  }
+function renderGoogleTranslateElementScript() {
+  return (
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'zh-TW',
+            includedLanguages: 'en,zh-CN,ja,zh-TW',
+            layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT,
+            multilanguagePage: true,
+          }, 'google_translate_element')
+        }`,
+      }}
+    />
+  )
+}
 
+const googleTranslateElementScript = renderGoogleTranslateElementScript();
+
+export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -48,11 +50,11 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        {googleTranslateElementScript}
         <script
           type="text/javascript"
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        ></script>
-        {renderGoogleTranslateElementScript()}
+        />
       </body>
     </html>
   )
