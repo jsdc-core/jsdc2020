@@ -67,10 +67,10 @@ const Sponsor = styled.div`
   width: 25%;
   padding: 25px 15px 0 15px;
   margin-bottom: 30px;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     width: 35%;
   }
-  @media ${props => props.theme.deviceSize.tablet} {
+  @media ${props => props.theme.mediaSize.tablet} {
     width: 50%;
   }
 `
@@ -106,7 +106,7 @@ const SpecialList = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     /* display: block; */
     flex-direction: column;
   }

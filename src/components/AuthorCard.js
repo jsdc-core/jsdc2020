@@ -57,13 +57,13 @@ const Container = styled.div`
   flex-direction: column;
   max-width: 25%;
   padding: 25px 15px 0;
-  @media ${props => props.theme.deviceSize.laptopL} {
+  @media ${props => props.theme.mediaSize.laptopL} {
     max-width: 33.33%;
   }
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     max-width: 50%;
   }
-  @media ${props => props.theme.deviceSize.tablet} {
+  @media ${props => props.theme.mediaSize.tablet} {
     max-width: 100%;
   }
 `

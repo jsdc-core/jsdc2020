@@ -54,7 +54,7 @@ const Container = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     margin-bottom: 20px;
   }
 `
@@ -122,7 +122,7 @@ const Title = styled.p`
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 35px;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     font-size: 1.2rem;
     line-height: 180%;
   }
@@ -133,7 +133,7 @@ const HighlightSpan = styled.span`
   font-size: 16px;
   line-height: 35px;
   text-align: center;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     font-size: 0.8rem;
   }
 `
@@ -142,7 +142,7 @@ const DescriptionSpan = styled.span`
   font-size: 16px;
   line-height: 35px;
   text-align: center;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     font-size: 0.8rem;
   }
 `

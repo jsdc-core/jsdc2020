@@ -52,7 +52,7 @@ const TeamMembers = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     margin: 20px 5%;
   }
 `
@@ -64,10 +64,10 @@ const Member = styled.div`
   padding: 25px;
   justify-content: center;
   align-items: center;
-  @media ${props => props.theme.deviceSize.laptopL} {
+  @media ${props => props.theme.mediaSize.laptopL} {
     width: 20%;
   }
-  @media ${props => props.theme.deviceSize.tablet} {
+  @media ${props => props.theme.mediaSize.tablet} {
     width: 50%;
   }
 `
