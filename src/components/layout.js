@@ -37,8 +37,8 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Container>
-        <GlobalStyle />
         <Nav siteTitle={data.site.siteMetadata.title} />
         <PageContainer>
           <main>{children}</main>
