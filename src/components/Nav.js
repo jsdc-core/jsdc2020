@@ -112,11 +112,12 @@ const CollapseContent = styled.div`
   display: flex;
   overflow: hidden;
   height: 54px;
-  margin-left: 30px;
   flex-direction: row;
   align-items: center;
+  margin-left: 30px;
   @media ${props => props.theme.mediaSize.laptop} {
     max-height: 0px;
+    margin-left: 0px;
     ${({ expandCollapse }) =>
     expandCollapse &&
     `
