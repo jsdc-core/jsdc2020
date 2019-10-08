@@ -1,5 +1,5 @@
 import React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
 import HyperLink from "./Link"
 import { LINKS } from "../constant"
@@ -12,21 +12,14 @@ const linksWithPrefix = links =>
   }))
 
 const Nav = () => {
-  const [expandCollapse, setExpandCollapse] = useState(false)
+  const [expandCollapse, setExpandCollapse] = useState(false);
+
   return (
     <Main>
       <NavBar>
         <Logo href="/">
           <Img src="/images/logo/logo.svg" width="100" />
         </Logo>
-        <LinkList>
-          {linksWithPrefix(LINKS).map((link, i) => (
-            <HyperLink key={i} href={link.href}>
-              {link.name}
-            </HyperLink>
-          ))}
-        </LinkList>
-        <div id="google_translate_element" />
         <NavButton
           onClick={() => {
             setExpandCollapse(!expandCollapse)
@@ -43,6 +36,7 @@ const Nav = () => {
             {link.name}
           </HyperLink>
         ))}
+        <GoogleTranslatePicker id="google_translate_element" />
       </CollapseContent>
     </Main>
   )
@@ -52,18 +46,22 @@ export default Nav
 
 const Main = styled.nav`
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: auto;
   position: fixed;
   z-index: 99999;
   background-color: ${props => props.theme.colors.bg};
+  @media ${props => props.theme.mediaSize.laptop} {
+    flex-direction: column;
+  }
 `
 
 const NavBar = styled.div`
   display: flex;
   flex-direction: row;
   position: relative;
+  width: 100px;
+  justify-content: flex-start;
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
@@ -72,15 +70,9 @@ const NavBar = styled.div`
   padding-top: 5px;
   padding-bottom: 5px;
   color: ${props => props.theme.colors.white};
-`
-
-const LinkList = styled.div`
-  display: flex;
-  flex: 1;
-  width: "100%";
-  margin-left: 22px;
-  @media ${props => props.theme.deviceSize.laptop} {
-    display: none;
+  @media ${props => props.theme.mediaSize.laptop} {
+    width: 100%;
+    justify-content: space-between;
   }
 `
 
@@ -89,6 +81,7 @@ const Logo = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  margin-right: 20px;
 `
 
 const NavButton = styled.button`
@@ -101,7 +94,7 @@ const NavButton = styled.button`
     background-color: rgba(144, 144, 144, 0.2);
     outline: none;
   }
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
     display: block;
   }
 `
@@ -117,16 +110,26 @@ const NavIconBar = styled.span`
 
 const CollapseContent = styled.div`
   display: flex;
-  max-height: 1px;
   overflow: hidden;
-  flex-direction: column;
+  height: 54px;
+  margin-left: 30px;
+  flex-direction: row;
   align-items: center;
-  @media ${props => props.theme.deviceSize.laptop} {
+  @media ${props => props.theme.mediaSize.laptop} {
+    max-height: 0px;
     ${({ expandCollapse }) =>
-      expandCollapse &&
-      `
+    expandCollapse &&
+    `
+      flex-direction: column;
+      align-items: center;
       min-height: 100vh;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
   `}
   }
 `
+
+const GoogleTranslatePicker = styled.div`
+  @media ${props => props.theme.mediaSize.laptop} {
+    position: relative !important;
+  }
+`;
