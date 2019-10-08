@@ -1,7 +1,8 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import styled from "styled-components"
-import HyperLink from "./Link"
+import Link from "./Link"
+import HyperLink from "./HyperLink"
 import { LINKS } from "../constant"
 import Img from "./Img"
 
@@ -17,9 +18,11 @@ const Nav = () => {
   return (
     <Main>
       <NavBar>
-        <Logo href="/">
-          <Img src="/images/logo/logo.svg" width="100" />
-        </Logo>
+        <Link href="/">
+          <Logo >
+            <Img src="/images/logo/logo.svg" width="100" />
+          </Logo>
+        </Link>
         <NavButton
           onClick={() => {
             setExpandCollapse(!expandCollapse)
@@ -32,9 +35,9 @@ const Nav = () => {
       </NavBar>
       <CollapseContent expandCollapse={expandCollapse}>
         {linksWithPrefix(LINKS).map((link, i) => (
-          <HyperLink key={i} href={link.href}>
+          <Link key={i} href={link.href}>
             {link.name}
-          </HyperLink>
+          </Link>
         ))}
         <GoogleTranslatePicker id="google_translate_element" />
       </CollapseContent>
