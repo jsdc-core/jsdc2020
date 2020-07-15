@@ -39,7 +39,7 @@ const Main = styled.nav`
   position: fixed;
   z-index: 99999;
   width: 100%;
-  height: 78px;
+  height: ${props => props.theme.vars.headerHeight}px;
   padding: 0 30px;
   color: ${props => props.theme.colors.text};
   box-shadow: ${props => props.theme.colors.shadow};
@@ -59,7 +59,7 @@ const Logo = styled.div`
 `
 const CollapseContent = styled.div`
   display: flex;
-  height: 78px;
+  height: ${props => props.theme.vars.headerHeight}px;
   flex-direction: row;
   align-items: center;
   margin-left: 30px;

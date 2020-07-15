@@ -4,37 +4,23 @@ import styled from "styled-components"
 export default () => {
   return (
     <Container>
-      <Text>
-        © 2020
-        <LinkText href="http://jsdc.tw" target="_blank">
-          JSDC.tw
-        </LinkText>
-      </Text>
+      © 2020
+      <LinkText href="http://jsdc.tw" target="_blank">
+        JSDC.tw
+      </LinkText>
+      &nbsp;| 宅斯迪西股份有限公司 (JSDC Corp.)
     </Container>
   )
 }
 
 const Container = styled.div`
-  width: 100%;
-  height: 23px;
-  margin-bottom: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
-`
-
-const Text = styled.span`
-  font-size: 0.8em;
-  list-style: none;
-  padding: 0;
-  color: ${props => props.theme.colors.text};
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
   justify-content: center;
+  margin-bottom: ${props => props.theme.vars.footerMargin}px;
   width: 100%;
-`
-
+  color: ${props => props.theme.colors.lightText};
+`;
 const LinkText = styled.a`
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   text-decoration: none;
@@ -43,4 +29,4 @@ const LinkText = styled.a`
   &:hover {
     color: ${props => props.theme.colors.primary};
   }
-`
+`;

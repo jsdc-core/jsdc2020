@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-size: ${theme.font.fontSize};
+    line-height: ${theme.font.lineHeight};
     color: ${theme.colors.text};
   }
 `
@@ -65,6 +66,10 @@ const Container = styled.div`
   color: ${props => props.theme.colors.text};
 `
 const PageContainer = styled.div`
-  min-height: 95vh;
-  padding-top: 100px;
+  min-height: calc(100vh -
+    ${({ theme }) => theme.vars.headerHeight
+      + theme.vars.footerHeight
+      + theme.vars.footerMargin}px
+  );
+  padding-top: ${props => props.theme.vars.headerHeight}px;
 `

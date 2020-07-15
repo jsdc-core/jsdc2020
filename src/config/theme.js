@@ -14,6 +14,7 @@ export default {
     active: '#1487BA',
     darkPrimary: '#ddb32d',
     text: '#464646',
+    lightText: '#BEBEBE',
     bg: '#fff',
     dividerLine: '#ececec',
     shadow: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
@@ -21,6 +22,7 @@ export default {
   font: {
     fontFamily: 'PingFang TC, Microsoft JhengHei, Open Sans, sans-serif',
     fontSize: '14px',
+    lineHeight: '22px',
     title2: `
       font-size: 16px;
       link-height: 22px;
@@ -37,5 +39,10 @@ export default {
     desktop: `(max-width: ${deviceSize.desktop - 1}px)`,
     desktopL: `(max-width: ${deviceSize.desktop - 1}px)`,
   },
-  deviceSize
+  deviceSize,
+  vars: {
+    headerHeight: 78,
+    footerHeight: 22,
+    footerMargin: 20,
+  }
 }
