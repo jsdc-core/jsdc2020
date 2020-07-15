@@ -11,7 +11,7 @@ const Description = styled.p`
   padding: 0 15px;
   max-width: 630px;
   line-height: 1.6em;
-  color: #e4e4e4;
+  color: ${props => props.theme.colors.text};
   letter-spacing: 2px;
   font-size: 14px;
   text-align: center;

@@ -5,7 +5,7 @@ import teamData from "~/data/team"
 
 const TeamPage = () => {
   return (
-    <Container>
+    <Main>
       {Object.keys(teamData).map(key => {
         const members = teamData[key]
         return (
@@ -22,7 +22,7 @@ const TeamPage = () => {
           </>
         )
       })}
-    </Container>
+    </Main>
   )
 }
 
@@ -35,10 +35,10 @@ const MemberBox = props => {
   )
 }
 
-const Container = styled.div`
+const Main = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px 15px;
+  padding: 20px 15px;
 `
 
 const Team = styled.span`

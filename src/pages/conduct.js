@@ -44,6 +44,7 @@ const Container = styled.div`
   margin: 0 auto;
   font-size: 14px;
   line-height: 23px;
+  padding: 20px 15px;
 `
 const Description = styled.p`
   margin-top: 20px;
