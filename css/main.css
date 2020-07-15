@@ -1,0 +1,21 @@
+#google_translate_element {
+  position: absolute;
+  right: 10px;
+}
+#google_translate_element .goog-te-gadget-simple {
+  border: 0 !important;
+  background-color: #222;
+  padding-top: 13px;
+  padding-left: 25px;
+}
+#google_translate_element .goog-te-gadget-simple img {
+  opacity: 0;
+  display: none;
+}
+#google_translate_element .goog-te-gadget-simple a, #google_translate_element .goog-te-gadget-simple span {
+  color: #e4e4e4 !important;
+  border: none !important;
+}
+#google_translate_element .goog-te-gadget-simple a:hover, #google_translate_element .goog-te-gadget-simple span:hover {
+  text-decoration: none;
+}

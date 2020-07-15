@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/job.js"],"names":["Job"],"mappings":"0FAAA,mEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-job-js-449c2caa591c41d9a622.js","sourcesContent":["import React from \"react\"\n\nexport default function Job() {\n  return <div></div>\n}\n"],"sourceRoot":""}
