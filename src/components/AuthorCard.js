@@ -82,7 +82,7 @@ const Avatar = styled(Img)`
 `
 
 const Content = styled.div`
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.text};
   color: black;
 `
 

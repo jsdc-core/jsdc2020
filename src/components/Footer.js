@@ -5,7 +5,7 @@ export default () => {
   return (
     <Container>
       <Text>
-        © 2019
+        © 2020
         <LinkText href="http://jsdc.tw" target="_blank">
           JSDC.tw
         </LinkText>
@@ -27,7 +27,7 @@ const Text = styled.span`
   font-size: 0.8em;
   list-style: none;
   padding: 0;
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.text};
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;

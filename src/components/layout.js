@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-size: ${theme.font.fontSize};
-    color: ${theme.colors.white};
+    color: ${theme.colors.text};
   }
 `
 
@@ -60,10 +60,10 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   min-height: 100vh;
+  min-width: ${props => props.theme.deviceSize.mobileM}px;
   background-color: ${props => props.theme.colors.bg};
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.text};
 `
-
 const PageContainer = styled.div`
   min-height: 95vh;
   padding-top: 100px;

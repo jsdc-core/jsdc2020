@@ -45,13 +45,11 @@ const Container = styled.div`
   font-size: 14px;
   line-height: 23px;
 `
-
 const Description = styled.p`
   margin-top: 20px;
   font-size: 14px;
   font-weight: 300;
 `
-
 const HightList = styled.li`
   color: ${props => props.theme.colors.primary};
   font-style: italic;

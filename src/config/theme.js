@@ -10,15 +10,22 @@ const deviceSize = {
 
 export default {
   colors: {
-    primary: "#ffc825",
-    darkPrimary: "#ddb32d",
-    white: "#efefef",
-    bg: "#222",
-    dividerLine: "#ececec",
+    primary: '#ffc825',
+    active: '#1487BA',
+    darkPrimary: '#ddb32d',
+    text: '#464646',
+    bg: '#fff',
+    dividerLine: '#ececec',
+    shadow: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
   },
   font: {
-    fontFamily: '"Microsoft JhengHei", "Open Sans", sans-serif',
-    fontSize: "14px",
+    fontFamily: 'PingFang TC, Microsoft JhengHei, Open Sans, sans-serif',
+    fontSize: '14px',
+    title2: `
+      font-size: 16px;
+      link-height: 22px;
+      font-weight: 500;
+    `
   },
   mediaSize: {
     mobileS: `(max-width: ${deviceSize.mobileS - 1}px)`,

@@ -8,7 +8,7 @@ function renderGoogleTranslateElementScript() {
         __html: `function googleTranslateElementInit() {
           new google.translate.TranslateElement({
             pageLanguage: 'zh-TW',
-            includedLanguages: 'en,zh-CN,ja,zh-TW',
+            includedLanguages: 'en,ja,zh-TW,zh-CN',
             layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT,
             multilanguagePage: true,
           }, 'google_translate_element')

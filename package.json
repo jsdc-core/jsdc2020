@@ -1,9 +1,9 @@
 {
-  "name": "JSDC-2019-Gatsby",
+  "name": "JSDC-2020-Gatsby",
   "private": false,
-  "description": "A clone of JSDC 2019 website",
+  "description": "JSDC 2020 website",
   "version": "0.1.0",
-  "author": "DMoon <dmoon.t@gmail.com>",
+  "author": "Deleav <a42006310@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",

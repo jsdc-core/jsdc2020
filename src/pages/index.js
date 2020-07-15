@@ -18,7 +18,7 @@ export default () => (
     </LogoContainer>
     <Title>The 8th JavaScript Developer Annual Conference in Taiwan</Title>
 
-    <HighlightSpan>JSDC 2019活動</HighlightSpan>
+    <HighlightSpan>JSDC 2020 活動</HighlightSpan>
     <HighlightSpan>
       2019/9/28 (六) 技術工作坊：「 JavaScript 新技術的入門與導入」
     </HighlightSpan>
@@ -50,7 +50,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `
-
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -58,7 +57,6 @@ const LogoContainer = styled.div`
     margin-bottom: 20px;
   }
 `
-
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -70,7 +68,6 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `
-
 const fadeOut = keyframes`
   0% {
     opacity: 1;
@@ -82,13 +79,11 @@ const fadeOut = keyframes`
     opacity: 0;
   }
 `
-
 const LogoImg = styled(Img)`
   max-width: 1440px;
   width: 100%;
   height: auto;
 `
-
 const InvisibleLogo = styled.div`
   width: 100%;
   height: 100%;
@@ -96,7 +91,6 @@ const InvisibleLogo = styled.div`
   display: block;
   max-width: 1440px;
 `
-
 const FadeOutLogo = styled.div`
   opacity: 0;
   position: absolute;
@@ -105,7 +99,6 @@ const FadeOutLogo = styled.div`
   max-width: 1440px;
   animation: ${fadeOut} 2s ease-out;
 `
-
 const FadeInLogo = styled.div`
   position: absolute;
   margin: auto;
@@ -113,7 +106,6 @@ const FadeInLogo = styled.div`
   max-width: 1440px;
   animation: ${fadeIn} 2s linear;
 `
-
 const Title = styled.p`
   font-size: 25px;
   line-height: 25px;
@@ -127,7 +119,6 @@ const Title = styled.p`
     line-height: 180%;
   }
 `
-
 const HighlightSpan = styled.span`
   color: ${props => props.theme.colors.primary};
   font-size: 16px;
@@ -137,7 +128,6 @@ const HighlightSpan = styled.span`
     font-size: 0.8rem;
   }
 `
-
 const DescriptionSpan = styled.span`
   font-size: 16px;
   line-height: 35px;
@@ -146,24 +136,21 @@ const DescriptionSpan = styled.span`
     font-size: 0.8rem;
   }
 `
-
 const Division = styled.div`
   margin-bottom: 35px;
 `
-
 const Button = styled.button`
   margin-top: 50px;
   width: 50%;
   height: 44px;
   background-color: ${props => props.theme.colors.bg};
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.text};
   border-radius: 5px;
   letter-spacing: 0.125em;
   font-weight: 400;
   &:hover {
-    background-color: ${props => props.theme.colors.white};
+    background-color: ${props => props.theme.colors.text};
     color: ${props => props.theme.colors.bg};
     transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   }
 `
-
