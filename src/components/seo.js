@@ -19,6 +19,9 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            copyright
+            keywords
+            name
           }
         }
       }
@@ -40,6 +43,22 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `copyright`,
+          content: site.siteMetadata.copyright,
+        },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords,
+        },
+        {
+          name: `itemprop`,
+          content: site.siteMetadata.name,
+        },
+        {
+          itemprop: `itemprop`,
+          content: site.siteMetadata.name,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -52,12 +71,24 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: `http://2020.jsdc.tw/`,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.name,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:site`,
+          content: '@jsdc_tw',
         },
         {
           name: `twitter:title`,

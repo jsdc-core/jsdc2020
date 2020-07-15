@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `JSDC 2020`,
+    description: `臺灣 JavaScript 開發者年會 ( JavaScript Developer Conference Taiwan，簡稱 JSDC ) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。`,
+    author: `JSDC Member`,
+    copyright: 'JSDC Taiwan',
+    keywords: 'website, javascript, conference, developers, js, JSDC, 2020',
+    name: 'JSDC 2020',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

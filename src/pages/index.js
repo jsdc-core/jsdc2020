@@ -5,6 +5,7 @@ import Img from "~/components/Img"
 
 export default () => (
   <Container>
+    <SEO/>
     <LogoContainer>
       <LogoImg src="/images/logo/logo.svg" />
     </LogoContainer>
