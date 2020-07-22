@@ -14,6 +14,10 @@ import Nav from "~/components/Nav"
 import Footer from "~/components/Footer"
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: ${theme.font.fontFamily};
     background: ${theme.colors.bg};

@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import PageTitle from "~/components/PageTitle"
+import WordPageLayout from '../components/WordPageLayout'
 
 export default function Conduct() {
   return (
-    <Container>
-      <PageTitle title="Code of Conduct" />
+    <WordPageLayout
+      title='行為準則'
+      imgSrc='/images/group.jpg'>
       <Description>
         JSDC
         致力於為社群中的每位成員提供更自由、友善、開放的環境。我們相信每位參與社群活動的夥伴，不論年齡、性別、性傾向、外貌、職業、軟體偏好、種族或宗教信仰等，都值得被尊重。而我們會盡力提供最安全的環境，讓參與
@@ -33,25 +34,14 @@ export default function Conduct() {
         如有會眾違反了此準則的行為，JSDC
         籌備團隊可採取任何適合的行動，包含警告或將騷擾者驅離會場，並且不退還費用，必要者會移送警察機關等法辦單位。
       </Description>
-    </Container>
+    </WordPageLayout>
   )
 }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: 0 auto;
-  font-size: 14px;
-  line-height: 23px;
-  padding: 20px 15px;
-`
 const Description = styled.p`
   margin-top: 20px;
-  font-size: 14px;
-  font-weight: 300;
 `
 const HightList = styled.li`
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.title1};
   font-style: italic;
 `

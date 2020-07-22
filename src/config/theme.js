@@ -15,12 +15,15 @@ export default {
     darkPrimary: '#ddb32d',
     text: '#464646',
     lightText: '#BEBEBE',
-    bg: '#fff',
+    white: '#FFFFFF',
+    bg: '#F7F7F7',
+    imgBg: '#DEDEDE',
     drawerHeaderBorder: '#EFEFEF',
     drawerLinkActive: '#F7F7F7',
     dividerLine: '#ececec',
     shadow: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
     overlayBg: 'rgba(0, 0, 0, 0.4)',
+    title1: '#18A57E',
   },
   font: {
     fontFamily: 'PingFang TC, Microsoft JhengHei, Open Sans, sans-serif',
@@ -28,9 +31,14 @@ export default {
     lineHeight: '22px',
     title2: `
       font-size: 16px;
-      link-height: 22px;
+      line-height: 22px;
       font-weight: 500;
-    `
+    `,
+    title1: `
+      font-size: 32px;
+      line-height: 45px;
+      font-weight: 500;
+    `,
   },
   mediaSize: {
     mobileS: `(max-width: ${deviceSize.mobileS - 1}px)`,

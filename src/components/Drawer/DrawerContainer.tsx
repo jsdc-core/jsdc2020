@@ -45,7 +45,7 @@ const slideIn = keyframes`
 const Main = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${props => props.theme.colors.bg};
+  background-color: ${props => props.theme.colors.white};
   width: 286px;
   height: 100vh;
   animation: ${slideIn} 0.15s;
