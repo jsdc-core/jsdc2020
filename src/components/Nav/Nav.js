@@ -72,8 +72,8 @@ const CollapseContent = styled.div`
     display: none;
   }
 `
-const GoogleTranslatePicker = styled.div`
-  @media ${props => props.theme.mediaSize.laptop} {
-    position: relative !important;
-  }
-`;
+// const GoogleTranslatePicker = styled.div`
+//   @media ${props => props.theme.mediaSize.laptop} {
+//     position: relative !important;
+//   }
+// `;

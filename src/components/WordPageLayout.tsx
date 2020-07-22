@@ -25,7 +25,7 @@ const Main = styled.div`
   margin: auto;
 `;
 const Inner = styled.div`
-  margin: 20px 30px;
+  margin: 20px 0;
   max-width: 1000px;
 `;
 const Image = styled.div<{ src: string }>`
@@ -42,6 +42,10 @@ const Content = styled.div`
   padding: 30px 45px;
   border-radius: 20px;
   background-color: ${props => props.theme.colors.white};
+
+  @media ${props => props.theme.mediaSize.laptop} {
+    margin: -160px 12px 0;
+  }
 `;
 const Title = styled.h1`
   ${props => props.theme.font.title1};

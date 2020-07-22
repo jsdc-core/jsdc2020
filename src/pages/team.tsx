@@ -1,13 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "~/components/Img"
-import teamData from "~/data/team"
+import teamData from '~/data/team'
+// import PageTitle from '../components/PageTitle'
 
 const TeamPage = () => {
   return (
     <Main>
-      {Object.keys(teamData).map(key => {
-        const members = teamData[key]
+      {/* <PageTitle title='工作團隊'/> */}
+      {Object.keys(teamData).map((key: string) => {
+        const members = teamData[key];
         return (
           <>
             <Team>{key}</Team>
