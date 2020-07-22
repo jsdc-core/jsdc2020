@@ -20,13 +20,14 @@ const Container = styled.div`
 `
 const LogoContainer = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
   min-height: calc(100vh -
     ${({ theme }) => theme.vars.headerHeight
       + theme.vars.footerHeight
       + theme.vars.footerMargin}px
   );
-  justify-content: center;
+  margin: 0 30px;
 `
 const LogoImg = styled(Img)`
   max-width: 485px;

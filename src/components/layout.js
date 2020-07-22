@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${theme.font.fontSize};
     line-height: ${theme.font.lineHeight};
     color: ${theme.colors.text};
+    margin: 0;
   }
 `
 

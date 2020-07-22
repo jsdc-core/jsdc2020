@@ -1,32 +1,30 @@
 import React from "react"
-import { useState } from "react"
 import styled from "styled-components"
-import Link from "./Link"
-import { LINKS } from "../constant"
-import Img from "./Img"
-
-const linksWithPrefix = links =>
-  links.map(link => ({
-    ...link,
-    href: `${link.href}`,
-  }))
+import Link from "../Link"
+import { LINKS } from "../../constant"
+import DrawerButton from '../Drawer'
+import Logo from './Logo'
+import linksWithPrefix from '../../utils/linksWithPrefix'
 
 const Nav = () => {
   return (
     <Main>
-      <Link href="/">
-        <Logo>
-          <Img src="/images/logo/logo.svg" width="100" />
-        </Logo>
-      </Link>
-      <CollapseContent>
-        {linksWithPrefix(LINKS).map((link, i) => (
-          <Link key={i} href={link.href} showActive>
-            {link.name}
-          </Link>
-        ))}
-        {/* <GoogleTranslatePicker id="google_translate_element" /> */}
-      </CollapseContent>
+      <Inner>
+        <DrawerButton/>
+        <Link href="/">
+          <LogoContainer>
+            <Logo/>
+          </LogoContainer>
+        </Link>
+        <CollapseContent>
+          {linksWithPrefix(LINKS).map((link, i) => (
+            <Link key={i} href={link.href} showActiveBorder>
+              {link.name}
+            </Link>
+          ))}
+          {/* <GoogleTranslatePicker id="google_translate_element" /> */}
+        </CollapseContent>
+      </Inner>
     </Main>
   )
 }
@@ -34,24 +32,30 @@ const Nav = () => {
 export default Nav
 
 const Main = styled.nav`
-  display: flex;
-  justify-content: space-between;
   position: fixed;
-  z-index: 99999;
+  z-index: 2;
   width: 100%;
   height: ${props => props.theme.vars.headerHeight}px;
-  padding: 0 30px;
   color: ${props => props.theme.colors.text};
   box-shadow: ${props => props.theme.colors.shadow};
   background-color: ${props => props.theme.colors.bg};
+  min-width: ${props => props.theme.deviceSize.mobileM}px;
+
+  ${props => props.theme.font.title2};
+`
+const Inner = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
 
   @media ${props => props.theme.mediaSize.laptop} {
     justify-content: center;
   }
-
-  ${props => props.theme.font.title2};
-`
-const Logo = styled.div`
+`;
+const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,11 +67,11 @@ const CollapseContent = styled.div`
   flex-direction: row;
   align-items: center;
   margin-left: 30px;
+
   @media ${props => props.theme.mediaSize.laptop} {
     display: none;
   }
 `
-
 const GoogleTranslatePicker = styled.div`
   @media ${props => props.theme.mediaSize.laptop} {
     position: relative !important;

@@ -1,10 +1,13 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-import HyperLink from "~/components/HyperLink"
 import { Location } from "@reach/router"
 
-const StyledLink = styled(Link)`
+interface IAttr {
+  active: boolean;
+}
+
+const StyledLink = styled(Link)<IAttr & { activeBg: boolean }>`
   position: relative;
   cursor: pointer;
   padding: 0 5px;
@@ -20,11 +23,15 @@ const StyledLink = styled(Link)`
       : props.theme.colors.text
   };
 
+  background: ${
+    props => props.activeBg && props.theme.colors.drawerLinkActive
+  };
+
   &:hover {
     color: ${props => props.theme.colors.active};
   }
 `
-const ActiveBorder = styled.div`
+const ActiveBorder = styled.div<IAttr>`
   ${props => props.active && css`
     position: absolute;
     height: 2px;
@@ -36,14 +43,26 @@ const ActiveBorder = styled.div`
   `}
 `;
 
-export default ({ location, className, href, children, showActive }) => {
+export default ({ className, href, children, showActiveBorder, showActiveBg, onClose }: React.PropsWithChildren<{
+  className?: string;
+  href: string;
+  showActiveBorder?: boolean;
+  showActiveBg?: boolean;
+  onClose?: (e: React.MouseEvent) => void;
+}>) => {
+  const handleClick = (e: React.MouseEvent) => {
+    onClose?.(e);
+  }
+
   return (
     <Location>
       {({ location }) => {
+        const active =  location.pathname === href;
+
         return (
-          <StyledLink to={href} active={showActive && location.pathname === href}>
+          <StyledLink onClick={handleClick} className={className} to={href} active={showActiveBorder && active} activeBg={showActiveBg && active}>
             {children}
-            <ActiveBorder active={showActive && location.pathname === href}/>
+            {showActiveBorder && <ActiveBorder active={active}/>}
           </StyledLink>
         )
       }}

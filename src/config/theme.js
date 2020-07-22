@@ -16,8 +16,11 @@ export default {
     text: '#464646',
     lightText: '#BEBEBE',
     bg: '#fff',
+    drawerHeaderBorder: '#EFEFEF',
+    drawerLinkActive: '#F7F7F7',
     dividerLine: '#ececec',
     shadow: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
+    overlayBg: 'rgba(0, 0, 0, 0.4)',
   },
   font: {
     fontFamily: 'PingFang TC, Microsoft JhengHei, Open Sans, sans-serif',
@@ -41,7 +44,8 @@ export default {
   },
   deviceSize,
   vars: {
-    headerHeight: 78,
+    headerHeight: 60,
+    headerLogoHeight: 40,
     footerHeight: 22,
     footerMargin: 20,
   }
