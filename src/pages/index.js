@@ -27,10 +27,10 @@ const LogoContainer = styled.div`
       + theme.vars.footerHeight
       + theme.vars.footerMargin}px
   );
-  margin: 0 30px;
 `
 const LogoImg = styled(Img)`
   max-width: 485px;
   width: 100%;
   height: auto;
+  margin: 0 30px;
 `

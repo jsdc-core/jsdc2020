@@ -4,7 +4,7 @@ import Img from '../Img';
 import DrawerContainer from './DrawerContainer';
 
 export default function DrawerButton() {
-  const [showDrawer, setShowDrawer] = useState(true);
+  const [showDrawer, setShowDrawer] = useState(false);
 
   return (
     <>
