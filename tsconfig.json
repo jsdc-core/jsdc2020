@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -17,7 +17,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "~/*": ["./client/*"]
+      "~/*": ["./src/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -35,12 +35,10 @@
   },
   "exclude": [
     "node_modules",
-    ".next",
-    "build",
-    "next.config.js"
+    ".cache",
+    "public",
   ],
   "include": [
-    "styled.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.svg"

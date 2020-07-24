@@ -1,4 +1,9 @@
-export const LINKS = [
+export interface ILink {
+  href: string;
+  name: string;
+}
+
+export const LINKS: ILink[] = [
   { href: "/", name: "首頁" },
   { href: "/about", name: "關於我們" },
   // { href: "/venue", name: "會場" },

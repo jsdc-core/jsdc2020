@@ -3,7 +3,7 @@
 // import original module declarations
 import 'styled-components';
 
-import theme from '~/config/theme'
+import theme from '~/config/theme';
 
 // and extend them!
 declare module 'styled-components' {
