@@ -6,7 +6,6 @@
  */
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import styled, { createGlobalStyle, ThemeProvider, DefaultTheme } from 'styled-components'
 import Theme from '~/config/theme'
 import Nav from '~/components/Nav'
@@ -31,17 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Layout = ({ children }: React.PropsWithChildren<{}>) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+export default function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -55,8 +44,6 @@ const Layout = ({ children }: React.PropsWithChildren<{}>) => {
     </ThemeProvider>
   )
 }
-
-export default Layout
 
 const Container = styled.div`
   display: flex;

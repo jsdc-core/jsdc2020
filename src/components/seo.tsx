@@ -7,10 +7,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import { Helmet, MetaProps } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+interface IProps {
+  title?: string;
+  description?: string;
+  lang?: string;
+  meta?: MetaProps[];
+}
+
+function SEO({ description, lang, meta = [], title }: IProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,8 +36,8 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
   const tempTitle = site.siteMetadata.title;
+
   return (
     <Helmet
       htmlAttributes={{

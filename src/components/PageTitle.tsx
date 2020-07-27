@@ -4,16 +4,18 @@ import styled from "styled-components"
 export default function PageTitle({ title }: { title: string }) {
   return (
     <Main>
-      <Title>{title}</Title>
+      {title}
     </Main>
   )
 }
 
-const Main = styled.div`
-  height: 61px;
-  padding: 8px 60px;
-`;
-const Title = styled.div`
+const Main = styled.h1`
   ${props => props.theme.font.title1};
+
+  margin: 66px auto 32px;
+  height: 60px;
+  padding: 8px 60px;
   color: ${props => props.theme.colors.title1};
+  border: 1px solid ${props => props.theme.colors.title1};
+  border-radius: 30px;
 `;

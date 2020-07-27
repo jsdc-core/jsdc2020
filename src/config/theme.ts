@@ -29,14 +29,19 @@ export default {
     fontFamily: 'PingFang TC, Microsoft JhengHei, Open Sans, sans-serif',
     fontSize: '14px',
     lineHeight: '22px',
-    title2: `
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: 500;
-    `,
     title1: `
       font-size: 32px;
       line-height: 45px;
+      font-weight: 500;
+    `,
+    title2: `
+      font-size: 24px;
+      height: 33px;
+      font-weight: 500;
+    `,
+    title3: `
+      font-size: 16px;
+      line-height: 22px;
       font-weight: 500;
     `,
   },
@@ -52,9 +57,11 @@ export default {
   },
   deviceSize,
   vars: {
+    mainHorizontalMargin: 30,
     headerHeight: 60,
     headerLogoHeight: 40,
     footerHeight: 22,
     footerMargin: 20,
+    title2Margin: 40,
   }
 }
