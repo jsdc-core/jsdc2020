@@ -8,35 +8,36 @@ import sponsorsData from "~/data/sponsors"
 
 export default function SponsorPage() {
   return (
-    <Container>
-      <StyledPageTitle title={sponsorCategory.titanium.name} />
-      {sponsorsData["titanium"].map(sponsor => (
-        <SponsorBox
-          description={sponsor.description}
-          logo={`/images/sponsors/${sponsor.logo}`}
-          link={sponsor.link}
-        />
-      ))}
-      <StyledPageTitle title={sponsorCategory.gold.name} />
-      {sponsorsData["gold"].map(sponsor => (
-        <SponsorBox
-          description={sponsor.description}
-          logo={`/images/sponsors/${sponsor.logo}`}
-          link={sponsor.link}
-        />
-      ))}
-      <StyledPageTitle title={sponsorCategory.special.name} />
-      <SpecialList>
-        {sponsorsData["special"].map(sponsor => (
-          <SpecialSponsor>
-            <SponsorLogoLink
-              src={`/images/sponsors/${sponsor.logo}`}
-              link={sponsor.link}
-            />
-          </SpecialSponsor>
-        ))}
-      </SpecialList>
-    </Container>
+    '敬請期待'
+    // <Container>
+    //   <StyledPageTitle title={sponsorCategory.titanium.name} />
+    //   {sponsorsData["titanium"].map(sponsor => (
+    //     <SponsorBox
+    //       description={sponsor.description}
+    //       logo={`/images/sponsors/${sponsor.logo}`}
+    //       link={sponsor.link}
+    //     />
+    //   ))}
+    //   <StyledPageTitle title={sponsorCategory.gold.name} />
+    //   {sponsorsData["gold"].map(sponsor => (
+    //     <SponsorBox
+    //       description={sponsor.description}
+    //       logo={`/images/sponsors/${sponsor.logo}`}
+    //       link={sponsor.link}
+    //     />
+    //   ))}
+    //   <StyledPageTitle title={sponsorCategory.special.name} />
+    //   <SpecialList>
+    //     {sponsorsData["special"].map(sponsor => (
+    //       <SpecialSponsor>
+    //         <SponsorLogoLink
+    //           src={`/images/sponsors/${sponsor.logo}`}
+    //           link={sponsor.link}
+    //         />
+    //       </SpecialSponsor>
+    //     ))}
+    //   </SpecialList>
+    // </Container>
   )
 }
 const SponsorLogoLink = ({ src, link }) => (

@@ -5,12 +5,22 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
+import React, { useMemo } from 'react'
 import styled, { createGlobalStyle, ThemeProvider, DefaultTheme, css } from 'styled-components'
+import { useLocation } from '@reach/router'
 import Theme from '~/config/theme'
 import Nav from '~/components/Nav'
 import Footer from '~/components/Footer'
-import { useLocation } from '@reach/router'
+import SEO from './seo'
+import { LINKS } from '~/constant'
+
+interface SiteTitleQuery {
+  site: {
+    siteMetadata: {
+      title: string;
+    }
+  }
+}
 
 const theme: DefaultTheme = Theme;
 
@@ -33,11 +43,16 @@ const GlobalStyle = createGlobalStyle`
 
 export default function Layout({ children }: React.PropsWithChildren<{}>) {
   const location = useLocation();
+  const title = useMemo(() => {
+    const link = LINKS.find(l => l.href === location.pathname);
+    return link?.name;
+  }, [location.pathname]);
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
       <Container mainPage={location.pathname === '/'}>
+        <SEO title={title}/>
         <Nav/>
         <PageContainer>
           <main>{children}</main>

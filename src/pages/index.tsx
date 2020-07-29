@@ -1,32 +1,11 @@
 import React from "react"
-import SEO from "../components/seo"
 import styled from "styled-components"
 import Img from "~/components/Img"
-import { useStaticQuery, graphql } from 'gatsby'
 import HyperLink from '~/components/HyperLink'
 
-interface SiteTitleQuery {
-  site: {
-    siteMetadata: {
-      title: string;
-    }
-  }
-}
-
 export default () => {
-  const data: SiteTitleQuery = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <Container>
-      <SEO title={data.site.siteMetadata.title}/>
       <MainContainer>
         <LogoImg src="/images/logo/mainLogo.png" />
         <Info>

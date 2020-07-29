@@ -9,7 +9,7 @@ const Teams: {
     { name: "Zet", img: "zet.jpg" },
     { name: "Caesar", img: "logo.svg" },
   ],
-  '贊助組': [
+  '網站組': [
     { name: "Deleav", img: "logo.svg" },
     { name: "Pimi", img: "logo.svg" },
   ],

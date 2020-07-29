@@ -15,12 +15,13 @@ export default function AgendaPage() {
     [WORKSHOP.key]: WorkshopContent,
   }
   return (
-    <Container>
-      <SegmentPages subPages={subPages} {...segmentHook} />
-      <FooterDescription>
-        若遇不可抗拒因素或其他未盡事宜，主辦單位保留活動議程及講師更動之權利。​
-      </FooterDescription>
-    </Container>
+    '敬請期待'
+    // <Container>
+    //   <SegmentPages subPages={subPages} {...segmentHook} />
+    //   <FooterDescription>
+    //     若遇不可抗拒因素或其他未盡事宜，主辦單位保留活動議程及講師更動之權利。​
+    //   </FooterDescription>
+    // </Container>
   )
 }
 

@@ -62,7 +62,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run dev",
     "serve": "gatsby serve",
-    "deploy": "yarn build && cp CNAME public && node .deploy/deploy.js",
+    "deploy": "yarn build && cp CNAME public && cp googlea1cf7867353d96e9.html public && node .deploy/deploy.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js"
   },

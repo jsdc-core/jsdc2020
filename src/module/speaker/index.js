@@ -14,9 +14,10 @@ export default function Venue() {
     [WORKSHOP.key]: WorkshopContent,
   }
   return (
-    <Container>
-      <SegmentPages subPages={subPages} {...segmentHook} />
-    </Container>
+    '敬請期待'
+    // <Container>
+    //   <SegmentPages subPages={subPages} {...segmentHook} />
+    // </Container>
   )
 }
 

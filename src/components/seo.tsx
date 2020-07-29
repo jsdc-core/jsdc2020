@@ -43,9 +43,13 @@ function SEO({ description, lang, meta = [], title }: IProps) {
       htmlAttributes={{
         lang,
       }}
-      title={tempTitle}
-      // titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
+        {
+          name: 'author',
+          content: site.siteMetadata.author,
+        },
         {
           name: `description`,
           content: metaDescription,
