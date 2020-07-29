@@ -31,7 +31,7 @@ export default () => {
         <LogoImg src="/images/logo/mainLogo.png" />
         <Info>
           JSDC 2020 開發者年會 活動時間：10/17
-          <InvitationButton href='#'>
+          <InvitationButton href='https://forms.gle/yWDkcxdRezsdUpLU6'>
             活動熱烈徵稿中
           </InvitationButton>
         </Info>
@@ -86,6 +86,7 @@ const InvitationButton = styled(HyperLink)`
   box-shadow: 0 5px 0 0 ${props => props.theme.colors.mainPink};
 
   @media ${props => props.theme.mediaSize.tablet} {
-    padding: 5px 36px;
+    padding: 5px 34px;
+    max-width: 212px;
   }
 `;

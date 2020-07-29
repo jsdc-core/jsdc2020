@@ -1,9 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 
-export default function HyperLink(props: { href: string; className?: string }) {
+interface IProps extends React.PropsWithChildren<{}> {
+  href: string;
+  className?: string;
+}
+
+export default function HyperLink({ children, ...props}: IProps) {
   return (
-    <StyledLink target="_blank" rel="noopener" {...props} />
+    <StyledLink target="_blank" rel="noopener" {...props}>
+      {children}
+    </StyledLink>
   )
 }
 
