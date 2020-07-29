@@ -24,6 +24,8 @@ export default {
     shadow: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
     overlayBg: 'rgba(0, 0, 0, 0.4)',
     title1: '#18A57E',
+    mainBg: '#001A29',
+    mainPink: '#FD4680',
   },
   font: {
     fontFamily: 'PingFang TC, Microsoft JhengHei, Open Sans, sans-serif',
@@ -36,10 +38,15 @@ export default {
     `,
     title2: `
       font-size: 24px;
-      height: 33px;
+      line-height: 33px;
       font-weight: 500;
     `,
     title3: `
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+    `,
+    title4: `
       font-size: 16px;
       line-height: 22px;
       font-weight: 500;

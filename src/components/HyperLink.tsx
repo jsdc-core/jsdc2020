@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-export default function HyperLink(props) {
+export default function HyperLink(props: { href: string; className?: string }) {
   return (
-    <StyledLink href={props.href} target="_blank" rel="noopener" {...props} />
+    <StyledLink target="_blank" rel="noopener" {...props} />
   )
 }
 

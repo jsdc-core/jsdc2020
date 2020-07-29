@@ -41,7 +41,7 @@ const Main = styled.nav`
   background-color: ${props => props.theme.colors.white};
   min-width: ${props => props.theme.deviceSize.mobileM}px;
 
-  ${props => props.theme.font.title3};
+  ${props => props.theme.font.title4};
 `
 const Inner = styled.div`
   position: relative;

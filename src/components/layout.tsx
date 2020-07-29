@@ -6,10 +6,11 @@
  */
 
 import React from 'react'
-import styled, { createGlobalStyle, ThemeProvider, DefaultTheme } from 'styled-components'
+import styled, { createGlobalStyle, ThemeProvider, DefaultTheme, css } from 'styled-components'
 import Theme from '~/config/theme'
 import Nav from '~/components/Nav'
 import Footer from '~/components/Footer'
+import { useLocation } from '@reach/router'
 
 const theme: DefaultTheme = Theme;
 
@@ -31,10 +32,12 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export default function Layout({ children }: React.PropsWithChildren<{}>) {
+  const location = useLocation();
+
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Container>
+      <GlobalStyle/>
+      <Container mainPage={location.pathname === '/'}>
         <Nav/>
         <PageContainer>
           <main>{children}</main>
@@ -45,7 +48,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
   )
 }
 
-const Container = styled.div`
+const Container = styled.div<{ mainPage: boolean }>`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -53,6 +56,13 @@ const Container = styled.div`
   min-width: ${props => props.theme.deviceSize.mobileM}px;
   background-color: ${props => props.theme.colors.bg};
   color: ${props => props.theme.colors.text};
+
+  ${props => props.mainPage && css`
+    background-color: ${props => props.theme.colors.mainBg};
+    background-image: url('/images/common/bg.png');
+    background-size: cover;
+    background-position: center;
+  `}
 `
 const PageContainer = styled.div`
   min-height: calc(100vh -
