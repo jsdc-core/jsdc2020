@@ -3,11 +3,14 @@ import styled from "styled-components"
 import Img from "~/components/Img"
 import teamData from '~/data/team'
 import PageTitle from '../components/PageTitle'
+import Aspect from '~/components/Aspect'
 
 const MemberBox = (props: { image: string; name: string }) => {
   return (
     <Member>
-      <Avatar src={props.image} />
+      <StyledAspect ratio={1}>
+        <Avatar src={props.image} />
+      </StyledAspect>
       <Name>{props.name}</Name>
     </Member>
   )
@@ -106,12 +109,16 @@ const Member = styled.div`
   }
 `
 const Avatar = styled(Img)`
+  height: 100%;
   width: 100%;
-  height: auto;
   border-radius: 50%;
+  background-color: ${props => props.theme.colors.white};
 `
 const Name = styled.span`
   padding: 20px 0px;
   font-size: 14px;
   font-weight: 300;
 `
+const StyledAspect = styled(Aspect)`
+  width: 100%;
+`;

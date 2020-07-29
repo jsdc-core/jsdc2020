@@ -30,7 +30,7 @@ export default () => {
       <MainContainer>
         <LogoImg src="/images/logo/mainLogo.png" />
         <Info>
-          JSDC 2020 開發者年會 活動時間：10/17
+          JSDC 2020 開發者年會 10/17 線上舉行
           <InvitationButton href='https://user34231.psee.io/TN4WX'>
             活動熱烈徵稿中
           </InvitationButton>
