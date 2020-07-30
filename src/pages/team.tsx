@@ -86,7 +86,7 @@ const Team = styled.h2`
   }
 `
 const TeamMembers = styled.div`
-  margin: 20px 10%;
+  margin: 0 ${props => props.theme.vars.mainHorizontalMargin}px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -98,7 +98,7 @@ const Member = styled.div`
   display: flex;
   flex-direction: column;
   width: 15%;
-  padding: 25px;
+  padding: 0 25px;
   justify-content: center;
   align-items: center;
   @media ${props => props.theme.mediaSize.laptopL} {
