@@ -18,7 +18,7 @@ function renderGoogleTranslateElementScript() {
   )
 }
 
-const googleTranslateElementScript = renderGoogleTranslateElementScript();
+// const googleTranslateElementScript = renderGoogleTranslateElementScript();
 
 export default function HTML(props) {
   return (
@@ -33,7 +33,7 @@ export default function HTML(props) {
         {props.headComponents}
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="icon" type="image/png" href="static/images/jsdc-logo.png" />
+        <link rel="shortcut icon" type="image/png" href="static/images/favicon.png" />
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
           rel="stylesheet"
@@ -50,11 +50,11 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        {googleTranslateElementScript}
-        <script
+        {/* {googleTranslateElementScript} */}
+        {/* <script
           type="text/javascript"
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        />
+        /> */}
       </body>
     </html>
   )

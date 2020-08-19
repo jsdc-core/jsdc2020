@@ -15,9 +15,10 @@ interface IProps {
   description?: string;
   lang?: string;
   meta?: MetaProps[];
+  path?: string;
 }
 
-function SEO({ description, lang, meta = [], title }: IProps) {
+function SEO({ description, lang, meta = [], title, path }: IProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -84,11 +85,23 @@ function SEO({ description, lang, meta = [], title }: IProps) {
         },
         {
           property: `og:url`,
-          content: `http://2020.jsdc.tw/`,
+          content: `http://2020.jsdc.tw${path}`,
         },
         {
           property: `og:site_name`,
           content: site.siteMetadata.name,
+        },
+        {
+          property: 'og:image',
+          content: 'https://2020.jsdc.tw/images/official/ogImage.jpg',
+        },
+        {
+          property: 'og:image:width',
+          content: '1200',
+        },
+        {
+          property: 'og:image:width',
+          content: '628',
         },
         {
           name: `twitter:card`,

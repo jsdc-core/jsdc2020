@@ -5,7 +5,7 @@ export default () => {
   return (
     <WordPageLayout
       title='關於我們'
-      imgSrc='/images/group.jpg'>
+      imgSrc='/images/about/hero.jpg'>
       JavaScript 開發者年會 (JavaScript Developer Conference，簡稱 JSDC)
       是台灣最大的 JavaScript 年度性技術研討會，旨在提供台灣中高階 JavaScript
       技術人才與世界最新 JavaScript 相關技術討論與分享。

@@ -6,7 +6,7 @@ export default function Conduct() {
   return (
     <WordPageLayout
       title='行為準則'
-      imgSrc='/images/group.jpg'>
+      imgSrc='/images/conduct/hero.jpg'>
       <Description>
         JSDC
         致力於為社群中的每位成員提供更自由、友善、開放的環境。我們相信每位參與社群活動的夥伴，不論年齡、性別、性傾向、外貌、職業、軟體偏好、種族或宗教信仰等，都值得被尊重。而我們會盡力提供最安全的環境，讓參與

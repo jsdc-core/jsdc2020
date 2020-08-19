@@ -52,7 +52,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
       <Container mainPage={location.pathname === '/'}>
-        <SEO title={title}/>
+        <SEO title={title} path={location.pathname}/>
         <Nav/>
         <PageContainer>
           <main>{children}</main>
