@@ -42,6 +42,6 @@ const Description = styled.p`
   margin-top: 20px;
 `
 const HightList = styled.li`
-  color: ${props => props.theme.colors.title1};
+  color: ${props => props.theme.colors.primary};
   font-style: italic;
 `

@@ -47,12 +47,13 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
     const link = LINKS.find(l => l.href === location.pathname);
     return link?.name;
   }, [location.pathname]);
+  const isMainPage = location.pathname === '/';
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
-      <Container mainPage={location.pathname === '/'}>
-        <SEO title={title} path={location.pathname}/>
+      <Container mainPage={isMainPage}>
+        <SEO title={!isMainPage && title} path={location.pathname}/>
         <Nav/>
         <PageContainer>
           <main>{children}</main>

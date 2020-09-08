@@ -27,6 +27,6 @@ const LinkText = styled.a`
   color: ${props => props.theme.colors.darkPrimary};
   margin-left: 5px;
   &:hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primaryOld};
   }
 `;

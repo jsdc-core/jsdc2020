@@ -127,7 +127,7 @@ const LanguageTag = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.primaryOld};
   border-radius: 5px;
   color: black;
   height: 25px;

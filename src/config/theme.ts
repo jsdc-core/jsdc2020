@@ -10,10 +10,12 @@ const deviceSize = {
 
 export default {
   colors: {
-    primary: '#ffc825',
+    primaryOld: '#ffc825',
+    primary: '#18A57E',
     active: '#1487BA',
     darkPrimary: '#ddb32d',
     text: '#464646',
+    subtitle: '#707070',
     lightText: '#BEBEBE',
     white: '#FFFFFF',
     bg: '#F7F7F7',
@@ -23,7 +25,7 @@ export default {
     dividerLine: '#ececec',
     shadow: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
     overlayBg: 'rgba(0, 0, 0, 0.4)',
-    title1: '#18A57E',
+    avatarBg: 'rgba(0, 0, 0, 0.2)',
     mainBg: '#001A29',
     mainPink: '#FD4680',
   },
@@ -47,9 +49,19 @@ export default {
       font-weight: 500;
     `,
     title4: `
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 500;
+    `,
+    title5: `
       font-size: 16px;
       line-height: 22px;
       font-weight: 500;
+    `,
+    body5: `
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
     `,
   },
   mediaSize: {

@@ -49,6 +49,6 @@ const Content = styled.div`
 `;
 const Title = styled.h1`
   ${props => props.theme.font.title1};
-  color: ${props => props.theme.colors.title1};
+  color: ${props => props.theme.colors.primary};
   margin: 0 0 40px;
 `;

@@ -15,7 +15,7 @@ const Main = styled.h1`
   margin: 66px auto 32px;
   height: 60px;
   padding: 8px 60px;
-  color: ${props => props.theme.colors.title1};
-  border: 1px solid ${props => props.theme.colors.title1};
+  color: ${props => props.theme.colors.primary};
+  border: 1px solid ${props => props.theme.colors.primary};
   border-radius: 30px;
 `;
