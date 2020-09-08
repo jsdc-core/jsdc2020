@@ -10,8 +10,8 @@ export default () => {
         <LogoImg src="/images/logo/mainLogo.png" />
         <Info>
           JSDC 2020 開發者年會 10/17 線上舉行
-          <InvitationButton href='https://user34231.psee.io/TN4WX'>
-            活動熱烈徵稿中
+          <InvitationButton href='https://www.accupass.com/event/2009050225034992799020'>
+            熱烈售票中
           </InvitationButton>
         </Info>
       </MainContainer>
