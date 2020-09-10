@@ -24,17 +24,18 @@ export default function TeamPage() {
       {Object.keys(teamData).map((key: string) => {
         const members = teamData[key];
         return (
-          <>
+          <React.Fragment key={key}>
             <Team>{key}</Team>
             <TeamMembers>
               {members.map(member => (
                 <MemberBox
+                  key={member.name}
                   image={`/images/teams/${member.img}`}
                   name={member.name}
                 />
               ))}
             </TeamMembers>
-          </>
+          </React.Fragment>
         )
       })}
     </Main>

@@ -39,7 +39,7 @@ const Main = styled.nav`
   color: ${props => props.theme.colors.text};
   box-shadow: ${props => props.theme.colors.shadow};
   background-color: ${props => props.theme.colors.white};
-  min-width: ${props => props.theme.deviceSize.mobileM}px;
+  min-width: ${props => props.theme.deviceSize.mobileS}px;
 
   ${props => props.theme.font.title5};
 `

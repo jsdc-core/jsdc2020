@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 interface IProps extends React.PropsWithChildren<{}> {
   href: string;
+  onClick: (e: React.MouseEvent) => void;
   className?: string;
 }
 

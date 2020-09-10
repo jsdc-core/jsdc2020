@@ -7,7 +7,7 @@ interface IAttr {
   active: boolean;
 }
 
-const StyledLink = styled(Link)<IAttr & { activeBg: boolean }>`
+const StyledLink = styled(Link)<IAttr & { activebg: boolean }>`
   position: relative;
   cursor: pointer;
   padding: 0 5px;
@@ -24,7 +24,7 @@ const StyledLink = styled(Link)<IAttr & { activeBg: boolean }>`
   };
 
   background: ${
-    props => props.activeBg && props.theme.colors.drawerLinkActive
+    props => props.activebg && props.theme.colors.drawerLinkActive
   };
 
   &:hover {
@@ -60,7 +60,7 @@ export default ({ className, href, children, showActiveBorder, showActiveBg, onC
         const active =  location.pathname === href;
 
         return (
-          <StyledLink onClick={handleClick} className={className} to={href} active={showActiveBorder && active} activeBg={showActiveBg && active}>
+          <StyledLink onClick={handleClick} className={className} to={href} active={!!showActiveBorder && active} activebg={!!showActiveBg && active}>
             {children}
             {showActiveBorder && <ActiveBorder active={active}/>}
           </StyledLink>

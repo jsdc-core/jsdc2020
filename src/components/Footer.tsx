@@ -13,10 +13,8 @@ export default () => {
   )
 }
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const Container = styled.p`
+  text-align: center;
   margin-bottom: ${props => props.theme.vars.footerMargin}px;
   width: 100%;
   color: ${props => props.theme.colors.lightText};

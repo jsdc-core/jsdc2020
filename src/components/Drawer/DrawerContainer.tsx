@@ -79,5 +79,4 @@ const CloseButton = styled.div`
 `;
 const Close = styled(Img).attrs({
   src: '/images/common/close.svg',
-})`
-`;
+})``;

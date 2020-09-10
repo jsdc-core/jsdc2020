@@ -20,9 +20,15 @@ export const Member = styled.div`
   @media ${props => props.theme.mediaSize.laptopL} {
     width: 20%;
   }
+  @media ${props => props.theme.mediaSize.laptop} {
+    width: 30%;
+  }
   @media ${props => props.theme.mediaSize.tablet} {
+    width: 40%;
+  }
+  @media ${props => props.theme.mediaSize.mobileL} {
     width: 50%;
-}
+  }
 `
 export const Avatar = styled(Img)`
   height: 100%;

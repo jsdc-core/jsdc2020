@@ -58,9 +58,19 @@ export default {
       line-height: 22px;
       font-weight: 500;
     `,
+    title6: `
+      font-size: 15px;
+      line-height: 21px;
+      font-weight: 500;
+    `,
     body5: `
       font-size: 16px;
       line-height: 22px;
+      font-weight: 400;
+    `,
+    body6: `
+      font-size: 13px;
+      line-height: 16px;
       font-weight: 400;
     `,
   },

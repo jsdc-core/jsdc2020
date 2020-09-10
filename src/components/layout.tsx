@@ -53,7 +53,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
       <Container mainPage={isMainPage}>
-        <SEO title={!isMainPage && title} path={location.pathname}/>
+        <SEO title={isMainPage ? '' : title} path={location.pathname}/>
         <Nav/>
         <PageContainer>
           <main>{children}</main>
@@ -69,7 +69,7 @@ const Container = styled.div<{ mainPage: boolean }>`
   flex-direction: column;
   flex: 1;
   min-height: 100vh;
-  min-width: ${props => props.theme.deviceSize.mobileM}px;
+  min-width: ${props => props.theme.deviceSize.mobileS}px;
   background-color: ${props => props.theme.colors.bg};
   color: ${props => props.theme.colors.text};
 
