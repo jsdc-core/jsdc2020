@@ -7,6 +7,7 @@ import Speakers from '~/data/speaker';
 import { Speaker } from './types';
 import SpeakerModal from './SpeakerModal';
 import HyperLink from '~/components/HyperLink';
+import { Company } from './styles';
 
 const MemberBox = ({ speaker }: { speaker: Speaker }) => {
   const [open, setOpen] = useState(false);
@@ -74,16 +75,6 @@ const SpeakerName = styled.h3`
 
   @media ${props => props.theme.mediaSize.laptop} {
     ${props => props.theme.font.title6};
-  }
-`;
-const Company = styled.p`
-  grid-area: company;
-  ${props => props.theme.font.body5};
-  color: ${props => props.theme.colors.subtitle};
-  margin: 0;
-
-  @media ${props => props.theme.mediaSize.laptop} {
-    ${props => props.theme.font.body6};
   }
 `;
 const SocialLinkContainer = styled.div`

@@ -3,6 +3,7 @@ import Overlay from '~/components/Overlay';
 import { Speaker } from './types';
 import styled, { keyframes } from 'styled-components';
 import Img from '~/components/Img';
+import { Company } from './styles';
 
 interface Props {
   speaker: Speaker;
@@ -26,10 +27,10 @@ export default function SpeakerModal({ speaker, onClose }: Props) {
           <AvatarContainer>
             <Avatar src={`/images/speaker/${speaker.img}`} alt=''/>
           </AvatarContainer>
-          <TitleContainer>
+          <Name>
             {speaker.name}<br/>
-            題目：{speaker.subject ?? 'TBD'}
-          </TitleContainer>
+          </Name>
+          <Company>{speaker.company}</Company>
           <Description>
             {!!speaker.description ? renderDescription(speaker.description) : 'TBD'}
           </Description>
@@ -61,10 +62,12 @@ const Main = styled.div`
   animation: ${popup} .15s;
   border-radius: 20px;
   display: grid;
-  grid-template-rows: auto 22px auto 8px auto;
+  grid-template-rows: auto 22px auto 4px auto 8px auto;
   grid-template-areas: 'avatar'
     '.'
-    'title'
+    'name'
+    '.'
+    'company'
     '.'
     'description';
   place-items: center;
@@ -115,8 +118,8 @@ const Avatar = styled.img`
     height: 120px;
   }
 `;
-const TitleContainer = styled.h3`
-  grid-area: title;
+const Name = styled.h3`
+  grid-area: name;
   margin: 0;
   ${props => props.theme.font.title4};
   text-align: center;
