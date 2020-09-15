@@ -16,9 +16,10 @@ interface IProps {
   lang?: string;
   meta?: MetaProps[];
   path?: string;
+  enableTitleTemplate?: boolean;
 }
 
-function SEO({ description, lang, meta = [], title, path }: IProps) {
+function SEO({ description, lang, meta = [], title, path, enableTitleTemplate }: IProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -37,15 +38,16 @@ function SEO({ description, lang, meta = [], title, path }: IProps) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const tempTitle = site.siteMetadata.title;
+  const siteTitle = site.siteMetadata.title;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
+      defaultTitle={siteTitle}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteTitle}`}
       meta={[
         {
           name: 'author',
@@ -73,7 +75,7 @@ function SEO({ description, lang, meta = [], title, path }: IProps) {
         },
         {
           property: `og:title`,
-          content: tempTitle,
+          content: title ? `${title} | ${siteTitle}` : siteTitle,
         },
         {
           property: `og:description`,
@@ -117,7 +119,7 @@ function SEO({ description, lang, meta = [], title, path }: IProps) {
         },
         {
           name: `twitter:title`,
-          content: tempTitle,
+          content: title ? `${title} | ${siteTitle}` : siteTitle,
         },
         {
           name: `twitter:description`,
