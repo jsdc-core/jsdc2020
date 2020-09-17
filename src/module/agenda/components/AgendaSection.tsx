@@ -46,11 +46,7 @@ const AgendaRow = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid ${props => props.theme.colors.border};
-
-  &:last-child {
-    border-bottom: none;
-  }
+  border-top: 1px solid ${props => props.theme.colors.border};
 `;
 const AgendaCell = styled.div`
   display: grid;

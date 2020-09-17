@@ -53,8 +53,12 @@ const AgendaTab = styled.h2<{ active: boolean }>`
   margin: 0;
   cursor: pointer;
   min-height: 60px;
-  ${props => !props.active && css`
-    background-color: ${props => props.theme.colors.deactivated};
+  ${props => props.active
+    ? css`
+      border-bottom: 2px solid ${props => props.theme.colors.primary};
+    `
+    : css`
+      background-color: ${props => props.theme.colors.deactivated};
   `};
   ${props => props.theme.font.title3};
 
