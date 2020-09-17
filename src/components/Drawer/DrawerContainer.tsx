@@ -7,8 +7,9 @@ import linksWithPrefix from '../../utils/linksWithPrefix';
 import Link from '../Link';
 import Img from '../Img';
 import Logo from '../Nav/Logo';
+import BuyTicketHyperLink from '../BuyTicketHyperLink';
 
-export default function DrawerContainer({ isOpen, onClose }) {
+export default function DrawerContainer({ onClose }: { onClose: () => void; }) {
   const handleClose = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     onClose();
@@ -23,6 +24,9 @@ export default function DrawerContainer({ isOpen, onClose }) {
             <Close/>
           </CloseButton>
         </DrawerHeader>
+        <LinkContainer>
+          <BuyTicketHyperLink/>
+        </LinkContainer>
         {linksWithPrefix(LINKS).map((link, i) => (
           <StyledLink key={i} href={link.href} onClose={handleClose} showActiveBg>
             {link.name}
@@ -32,11 +36,6 @@ export default function DrawerContainer({ isOpen, onClose }) {
     </Overlay>
   );
 }
-
-DrawerContainer.propTypes = {
-  isOpen: PropTypes.bool,
-  onClose: PropTypes.func,
-};
 
 const slideIn = keyframes`
   from { transform: translateX(-100%); }
@@ -56,7 +55,7 @@ const DrawerHeader = styled.div`
   align-items: center;
   justify-content: center;
   height: ${props => props.theme.vars.headerHeight}px;
-  border-bottom: 1px solid ${props => props.theme.colors.drawerHeaderBorder};
+  border-bottom: 1px solid ${props => props.theme.colors.border};
 `;
 const StyledLink = styled(Link)`
   display: flex;
@@ -80,3 +79,8 @@ const CloseButton = styled.div`
 const Close = styled(Img).attrs({
   src: '/images/common/close.svg',
 })``;
+const LinkContainer = styled.div`
+  display: grid;
+  place-items: center;
+  padding: 24px 0 12px;
+`;

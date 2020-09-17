@@ -50,7 +50,7 @@ export default function SpeakerPage() {
 const Main = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 const StyledAspect = styled(Aspect)`
   width: 100%;
 `;

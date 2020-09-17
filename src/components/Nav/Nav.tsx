@@ -5,6 +5,7 @@ import { LINKS } from "../../constant"
 import DrawerButton from '../Drawer'
 import Logo from './Logo'
 import linksWithPrefix from '../../utils/linksWithPrefix'
+import BuyTicketHyperLink from '../BuyTicketHyperLink'
 
 const Nav = () => {
   return (
@@ -23,6 +24,7 @@ const Nav = () => {
             </Link>
           ))}
           {/* <GoogleTranslatePicker id="google_translate_element" /> */}
+          <BuyTicketHyperLink/>
         </CollapseContent>
       </Inner>
     </Main>

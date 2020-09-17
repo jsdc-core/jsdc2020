@@ -20,7 +20,7 @@ export default {
     white: '#FFFFFF',
     bg: '#F7F7F7',
     imgBg: '#DEDEDE',
-    drawerHeaderBorder: '#EFEFEF',
+    border: '#EFEFEF',
     drawerLinkActive: '#F7F7F7',
     dividerLine: '#ececec',
     shadow: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
@@ -28,6 +28,7 @@ export default {
     avatarBg: 'rgba(0, 0, 0, 0.2)',
     mainBg: '#001A29',
     mainPink: '#FD4680',
+    deactivated: '#F2F2F2',
   },
   font: {
     fontFamily: 'PingFang TC, Microsoft JhengHei, Open Sans, sans-serif',

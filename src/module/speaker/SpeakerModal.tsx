@@ -3,22 +3,36 @@ import Overlay from '~/components/Overlay';
 import { Speaker } from './types';
 import styled, { keyframes } from 'styled-components';
 import Img from '~/components/Img';
-import { Company } from './styles';
+import { Company as Subtitle } from './styles';
+import renderDescription from '~/utils/renderDescription';
+import { Agenda } from '../agenda/types';
 
 interface Props {
   speaker: Speaker;
+  agenda?: Agenda;
   onClose: () => void;
 }
 
-export default function SpeakerModal({ speaker, onClose }: Props) {
+export default function SpeakerModal({ speaker, agenda, onClose }: Props) {
   const handleClose = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     onClose();
   }, []);
+  const { title, subtitle, description } = (() => {
+    if (agenda) {
+      return {
+        title: agenda.title,
+        subtitle: speaker.name,
+        description: agenda.description,
+      };
+    }
 
-  const renderDescription = (description: string) => {
-    return description?.split('\n').map(d => <>{d}<br/></>);
-  }
+    return {
+      title: speaker.name,
+      subtitle: speaker.company,
+      description: speaker.description,
+    };
+  })()
 
   return (
     <Overlay handleClick={handleClose}>
@@ -27,12 +41,13 @@ export default function SpeakerModal({ speaker, onClose }: Props) {
           <AvatarContainer>
             <Avatar src={`/images/speaker/${speaker.img}`} alt=''/>
           </AvatarContainer>
-          <Name>
-            {speaker.name}<br/>
-          </Name>
-          <Company>{speaker.company}</Company>
+          <Title>
+            {title}
+          </Title>
+          <br/>
+          <Subtitle>{subtitle}</Subtitle>
           <Description>
-            {!!speaker.description ? renderDescription(speaker.description) : 'TBD'}
+            {!!description ? renderDescription(description) : 'TBD'}
           </Description>
           <Close onClick={handleClose}/>
         </Main>
@@ -118,7 +133,7 @@ const Avatar = styled.img`
     height: 120px;
   }
 `;
-const Name = styled.h3`
+const Title = styled.h3`
   grid-area: name;
   margin: 0;
   ${props => props.theme.font.title4};
