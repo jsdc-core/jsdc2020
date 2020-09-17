@@ -16,9 +16,11 @@ const Speakers: Speaker[] = [{
   twitter: 'aszx87410',
 }, {
   name: 'Mindy',
+  company: '5xRuby 五倍紅寶石',
   description: 'Frontend Developer from Taipei.\n\nA newbie in software development.\nReact and Rails have been my recent passions.',
   img: 'MindyTai.jpg',
   github: 'MindyTai',
+  facebook: 'zoratai175',
 }, {
   name: 'Eric ShangKuan',
   company: 'Google',
@@ -28,9 +30,16 @@ const Speakers: Speaker[] = [{
   twitter: 'ericsk',
   facebook: 'ericsk0313',
 }, {
+  name: 'Rex Chen',
+  company: 'FULY.AI',
+  description: 'Fuly.ai 共同創辦人兼 CEO，為 AppWorks #20屆團隊，過去曾任職 Yahoo、趨勢資深前端工程師、以及 UXTesting 共同創辦人、新創公司技術顧問。由於創業需求，開始為自己學習後端、App 開發，慢慢的變成全端工程師，已經習慣每天都在學習新的技術來解決眼前的問題。',
+  github: 'rexchen',
+  img: 'rexchen.jpg',
+  facebook: 'rex.chen.336',
+}, {
   name: '邱弘毅',
   company: 'Finli',
-  description: '網頁工程師，閒暇時，喜歡主動投資，並了解其它學科知識。',
+  description: '網頁工程師。閒暇的時候，喜歡研究投資。除此之外，也多方涉獵不同學門知識，包含經濟學、投資學、人類學、歷史學、社會學、電腦科學、管理學。',
   img: 'noootown.jpg',
   github: 'noootown',
   facebook: 'noootownnotes',
