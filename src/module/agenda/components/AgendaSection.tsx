@@ -6,7 +6,8 @@ import SpeakerModal from '~/module/speaker/SpeakerModal';
 
 function AgendaRowComponent({ agenda }: { agenda: Agenda }) {
   const [open, setOpen] = useState(false);
-  const openable = !!agenda.title && !!agenda.speaker;
+  const speaker = agenda.speaker;
+  const openable = !!agenda.title && !!speaker;
   const handleOpen = () => {
     if (openable) setOpen(true);
   }
@@ -18,11 +19,13 @@ function AgendaRowComponent({ agenda }: { agenda: Agenda }) {
       </AgendaCell>
       <AgendaCell>
         <Title onClick={handleOpen} openable={openable}>{agenda.title || 'TBD'}</Title>
-        {agenda.speaker && <Speaker>{agenda.speaker.name}</Speaker>}
+        {(speaker || agenda.multiSpeaker) && <Speaker>{speaker?.name ?? agenda.multiSpeaker}</Speaker>}
       </AgendaCell>
-      {agenda.speaker && open && <SpeakerModal
-        agenda={agenda}
-        speaker={agenda.speaker}
+      {speaker && open && <SpeakerModal
+        avatar={speaker.img}
+        title={agenda.title}
+        subtitle={speaker.name}
+        description={agenda.description ?? ''}
         onClose={() => setOpen(false)}/>}
     </AgendaRow>
   );

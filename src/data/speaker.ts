@@ -48,12 +48,13 @@ export const SpeakerObj = {
     github: 'noootown',
     facebook: 'noootownnotes',
   },
-  'Paul Li (mei, a.k.a 老木大師)': {
-    name: 'Paul Li (mei, a.k.a 老木大師)',
+  'Paul Li (mei)': {
+    name: 'Paul Li (mei)',
     company: 'Verizon Media',
     img: 'meistudioli.png',
     github: 'meistudioli',
     facebook: 'mei.studio.li',
+    description: '',
   },
   'Fong': {
     name: 'Fong',

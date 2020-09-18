@@ -8,38 +8,25 @@ import renderDescription from '~/utils/renderDescription';
 import { Agenda } from '../agenda/types';
 
 interface Props {
-  speaker: Speaker;
-  agenda?: Agenda;
+  title: string;
+  subtitle: string;
+  description: string;
+  avatar: string;
   onClose: () => void;
 }
 
-export default function SpeakerModal({ speaker, agenda, onClose }: Props) {
+export default function SpeakerModal({ title, subtitle, description, avatar, onClose }: Props) {
   const handleClose = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     onClose();
   }, []);
-  const { title, subtitle, description } = (() => {
-    if (agenda) {
-      return {
-        title: agenda.title,
-        subtitle: speaker.name,
-        description: agenda.description,
-      };
-    }
-
-    return {
-      title: speaker.name,
-      subtitle: speaker.company,
-      description: speaker.description,
-    };
-  })()
 
   return (
     <Overlay handleClick={handleClose}>
       <Wrapper onClick={(e: React.MouseEvent) => e.stopPropagation()}>
         <Main>
           <AvatarContainer>
-            <Avatar src={`/images/speaker/${speaker.img}`} alt=''/>
+            <Avatar src={`/images/speaker/${avatar}`} alt=''/>
           </AvatarContainer>
           <Title>
             {title}

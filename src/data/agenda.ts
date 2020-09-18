@@ -36,14 +36,12 @@ const AgendaData: {
   }, {
     time: '11:30 - 12:00',
     title: '座談',
-  }, {
-    time: '12:00 - 14:00',
-    title: '中午休息',
+    multiSpeaker: '邱弘毅 x Eric ShangKuan x Rex Chen',
   }],
   afternoon: [{
     time: '14:00 - 14:40',
     title: '',
-    speaker: SpeakerObj['Paul Li (mei, a.k.a 老木大師)'],
+    speaker: SpeakerObj['Paul Li (mei)'],
   }, {
     time: '14:40 - 15:00',
     title: 'Lerna 的套件管理術',
@@ -72,6 +70,7 @@ const AgendaData: {
   }, {
     time: '16:30 - 17:00',
     title: '座談',
+    multiSpeaker: 'Will 保哥 x Jeremy Lu',
   }],
 };
 

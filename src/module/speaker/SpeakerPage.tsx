@@ -29,7 +29,12 @@ const MemberBox = ({ speaker }: { speaker: Speaker }) => {
           </SocialLinkContainer>
         </Info>
       </StyledMember>
-      {open && <SpeakerModal speaker={speaker} onClose={() => setOpen(false)}/>}
+      {open && <SpeakerModal
+        avatar={speaker.img}
+        title={speaker.name}
+        subtitle={speaker.company}
+        description={speaker.description}
+        onClose={() => setOpen(false)}/>}
     </>
   )
 };
