@@ -36,7 +36,7 @@ const AgendaData: {
     speaker: SpeakerObj.rexchen, // Rex Chen
   }, {
     time: '11:30 - 12:00',
-    title: '職涯座談 - 新創公司跟大企業之間該怎麼選擇？',
+    title: '【職涯座談】新創公司跟大企業之間該怎麼選擇？',
     multiSpeaker: '邱弘毅 x Eric ShangKuan x Rex Chen',
   }],
   afternoon: [{
@@ -72,7 +72,7 @@ const AgendaData: {
     speaker: SpeakerObj.coodoo, // Jeremy Lu
   }, {
     time: '16:30 - 17:00',
-    title: '技術座談 - 現代專案，該不該導入 TypeScript？',
+    title: '【技術座談】現代專案，該不該導入 TypeScript？',
     multiSpeaker: 'Will 保哥 x Jeremy Lu',
   }],
 };
