@@ -11,7 +11,7 @@ const AgendaData: {
     speaker: SpeakerObj.Tony1223,
   }, {
     time: '09:40 - 10:00',
-    title: '',
+    title: '「如何做 API mocking？」',
     speaker: SpeakerObj.aszx87410,
   }, {
     time: '10:00 - 10:20',
@@ -23,7 +23,8 @@ const AgendaData: {
     title: '休息時間',
   }, {
     time: '10:30 - 10:50',
-    title: '',
+    title: '本科 / 遠端 / 新創 經驗分享',
+    description: '這個議程會做三部分的經驗分享，分別是\n- 做為本科畢業生，是否該就讀研究所？\n- 遠端工作經驗分享\n- 美國種子輪新創工作文化分享',
     speaker: SpeakerObj.noootown,
   }, {
     time: '10:50 - 11:10',
@@ -49,7 +50,7 @@ const AgendaData: {
     speaker: SpeakerObj.FongX777,
   }, {
     time: '15:00 - 15:20',
-    title: '',
+    title: 'JavaScript 中鼓勵用非同步的 API，但用了就會提升效能避免阻塞嗎？',
     speaker: SpeakerObj.pjchender,
   }, {
     time: '15:20 - 15:40',
@@ -61,11 +62,13 @@ const AgendaData: {
     title: '休息時間',
   }, {
     time: '15:50 - 16:10',
-    title: '',
+    title: '用不用 TypeScript 隨便你，反正我是用了',
+    description: '無論你是前端或後端工程師，都逃不開 JavaScript 的魔掌，但是 JS 先天的弱型別特性，確實對千千萬萬開發者帶來不小的困擾。本次演講將著重在導入 TypeScript 的各種經驗分享，告訴你為什麼導入 TypeScript 之後，可以幫助你提升生命品質，過著比別人更好的生活。',
     speaker: SpeakerObj.doggy8088,
   }, {
     time: '16:10 - 16:30',
-    title: '',
+    title: '採用 TypeScript 前你該考慮的十件事',
+    description: '世界上有許多種風格迥異的 type system，而 Typescript 是目前 web 界最熱門的選擇之一，但就像所有 type system 一般它也有不同的優缺點，本場次將帶大家從高層次實務觀點瞭解採用 Typescript 帶來的好處與成本，並檢視是否有其它更好的選擇。',
     speaker: SpeakerObj.coodoo,
   }, {
     time: '16:30 - 17:00',
