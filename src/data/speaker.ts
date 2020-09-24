@@ -16,7 +16,7 @@ export const SpeakerObj = {
     twitter: 'aszx87410',
   },
   MindyTai: {
-    name: 'Mindy',
+    name: 'Mindy Tai',
     company: '5xRuby 五倍紅寶石',
     description: 'Frontend Developer from Taipei.\n\nA newbie in software development.\nReact and Rails have been my recent passions.',
     img: 'MindyTai.jpg',
