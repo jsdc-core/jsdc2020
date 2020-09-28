@@ -43,7 +43,7 @@ const AgendaData: {
   }],
   afternoon: [{
     time: '14:00 - 14:40',
-    title: '',
+    title: 'AMP & the missing parts Google doesn\'t tell',
     speaker: SpeakerObj.meistudioli, // Paul Li (mei)
   }, {
     time: '14:40 - 15:00',
@@ -52,7 +52,8 @@ const AgendaData: {
     speaker: SpeakerObj.FongX777, // Fong
   }, {
     time: '15:00 - 15:20',
-    title: 'JavaScript 中鼓勵用非同步的 API，但用了就會提升效能避免阻塞嗎？',
+    title: '用錯非同步，服務一樣會卡住',
+    description: 'JavaScript 是單線程的程式語言，為了避免程式阻塞，多鼓勵使用非同步的 API 來進行操作，但非同步的 API 是否都能夠避免阻塞呢？到底非同步、單執行緒這之間的關係是什麼？在場短講中，將釐清這些每天在用卻可能似懂非懂的概念',
     speaker: SpeakerObj.pjchender, // 陳柏融（PJCHENder）
   }, {
     time: '15:20 - 15:40',
