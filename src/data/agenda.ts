@@ -30,11 +30,12 @@ const AgendaData: {
     speaker: SpeakerObj.noootown, // 邱弘毅 (沒一村)
   }, {
     time: '10:50 - 11:10',
-    title: '',
+    title: '外商公司的生存之道與黃金手拷',
     speaker: SpeakerObj.ericsk, // Eric ShangKuan
   }, {
     time: '11:10 - 11:30',
-    title: '',
+    title: '你喜歡寫程式嗎？為自己學習寫程式',
+    description: '人生是個沒有對錯的選擇題，發掘自己寫程式最純粹的樂趣',
     speaker: SpeakerObj.rexchen, // Rex Chen
   }, {
     time: '11:30 - 12:00',
