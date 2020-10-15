@@ -9,7 +9,7 @@ export const LINKS: ILink[] = [
   // { href: "/venue", name: "會場" },
   { href: "/speaker", name: "講者介紹" },
   { href: "/agenda", name: "大會議程" },
-  // { href: "/sponsors", name: "合作夥伴" },
+  { href: "/sponsor", name: "合作夥伴" },
   { href: "/team", name: "工作團隊" },
   { href: "/conduct", name: "行為準則" },
 ]
