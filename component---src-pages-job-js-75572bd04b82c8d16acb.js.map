@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/job.js"],"names":["Job"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-job-js-75572bd04b82c8d16acb.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default function Job() {\r\n  return <div>敬請期待</div>\r\n}\r\n"],"sourceRoot":""}
