@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 import { Agenda } from '../types';
 import SpeakerModal from '~/module/speaker/SpeakerModal';
+import HyperLink from '~/components/HyperLink';
 
 function AgendaRowComponent({ agenda }: { agenda: Agenda }) {
   const [open, setOpen] = useState(false);
@@ -18,6 +19,7 @@ function AgendaRowComponent({ agenda }: { agenda: Agenda }) {
         {agenda.time}
       </AgendaCell>
       <AgendaCell>
+        {agenda.slide && <Tag><HyperLink href={agenda.slide}>Slide</HyperLink></Tag>}
         <Title onClick={handleOpen} openable={openable}>{agenda.title || 'TBD'}</Title>
         {(speaker || agenda.multiSpeaker) && <Speaker>{speaker?.name ?? agenda.multiSpeaker}</Speaker>}
       </AgendaCell>
@@ -83,5 +85,20 @@ const Speaker = styled.p`
 
   @media ${props => props.theme.mediaSize.tablet} {
     ${props => props.theme.font.body6};
+  }
+`;
+const Tag = styled.div`
+  ${props => props.theme.font.body6};
+  display: grid;
+  place-items: center;
+  justify-self: start;
+  padding: 4px 6px;
+  background-color: ${props => props.theme.colors.primary};
+  border-radius: 10px;
+
+  & > a {
+    color: ${props => props.theme.colors.white};
+    width: 100%;
+    height: 100%;
   }
 `;
